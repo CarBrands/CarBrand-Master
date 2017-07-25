@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CarBrand</title>
+    <!-- all css here -->
+    <!-- bootstrap.min.css -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <!-- font-awesome.min.css -->
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+    <!-- owl.carousel.css -->
+    <link rel="stylesheet" href="~/Content/css/owl.carousel.css">
+    <!-- owl.carousel.css -->
+    <link rel="stylesheet" href="~/Content/css/meanmenu.min.css">
+    <!-- shortcode/shortcodes.css -->
+    <link rel="stylesheet" href="~/Content/css/shortcode/shortcodes.css">
+    <!-- nivo-slider.css -->
+    <link rel="stylesheet" href="~/Content/css/nivo-slider.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="~/Content/style.css">
+    <!-- responsive.css -->
+    <link rel="stylesheet" href="~/Content/css/responsive.css">
+    <script src="~/Content/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    @RenderSection("head_css", required: false)
+    @RenderSection("head_scripts", required: false)
+</head>
+<body>
+
+    @Html.Partial("_Partial/header")
+
+    @Html.Partial("_Partial/topmenu")
+
+    @RenderBody()
+
+    @Html.Partial("_partial/footer")
+    
+</body>
+</html>
+<!-- all js here -->
+<!-- jquery-1.12.0 -->
+<script src="~/Content/js/vendor/jquery-1.12.0.min.js"></script>
+<!-- bootstrap.min.js -->
+<script src="~/Content/js/bootstrap.min.js"></script>
+<!-- nivo.slider.js -->
+<script src="~/Content/js/jquery.nivo.slider.pack.js"></script>
+<!-- jquery-ui.min.js -->
+<script src="~/Content/js/jquery-ui.min.js"></script>
+<!-- jquery.magnific-popup.min.js -->
+<script src="~/Content/js/jquery.magnific-popup.min.js"></script>
+<!-- jquery.meanmenu.min.js -->
+<script src="~/Content/js/jquery.meanmenu.js"></script>
+<!-- jquery.scrollup.min.js-->
+<script src="~/Content/js/jquery.scrollup.min.js"></script>
+<!-- owl.carousel.min.js -->
+<script src="~/Content/js/owl.carousel.min.js"></script>
+<!-- plugins.js -->
+<script src="~/Content/js/plugins.js"></script>
+<!-- main.js -->
+<script src="~/Content/js/main.js"></script>

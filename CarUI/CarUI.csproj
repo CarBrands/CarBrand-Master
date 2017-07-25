@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E8C1FF4-4771-4920-A52F-3AA7F289EE4C}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarUI</RootNamespace>
+    <AssemblyName>CarUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\meanmenu.min.css" />
+    <Content Include="Content\css\nivo-slider.css" />
+    <Content Include="Content\css\owl.carousel.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\shortcode\blog.css" />
+    <Content Include="Content\css\shortcode\client.css" />
+    <Content Include="Content\css\shortcode\default.css" />
+    <Content Include="Content\css\shortcode\footer.css" />
+    <Content Include="Content\css\shortcode\header.css" />
+    <Content Include="Content\css\shortcode\mainmenu.css" />
+    <Content Include="Content\css\shortcode\other-page.css" />
+    <Content Include="Content\css\shortcode\product-tab.css" />
+    <Content Include="Content\css\shortcode\product.css" />
+    <Content Include="Content\css\shortcode\shortcodes.css" />
+    <Content Include="Content\css\shortcode\slider.css" />
+    <Content Include="Content\img\banner\1.jpg" />
+    <Content Include="Content\img\banner\2.jpg" />
+    <Content Include="Content\img\banner\3.jpg" />
+    <Content Include="Content\img\bg-1.jpg" />
+    <Content Include="Content\img\blog\1.jpg" />
+    <Content Include="Content\img\blog\2.jpg" />
+    <Content Include="Content\img\blog\3.jpg" />
+    <Content Include="Content\img\brand\1.jpg" />
+    <Content Include="Content\img\brand\2.jpg" />
+    <Content Include="Content\img\brand\3.jpg" />
+    <Content Include="Content\img\brand\4.jpg" />
+    <Content Include="Content\img\brand\5.jpg" />
+    <Content Include="Content\img\brand\6.jpg" />
+    <Content Include="Content\img\cart\1.jpg" />
+    <Content Include="Content\img\cart\2.jpg" />
+    <Content Include="Content\img\cart\btn_remove.png" />
+    <Content Include="Content\img\cart\top-cart.png" />
+    <Content Include="Content\img\cart\top-cart2.png" />
+    <Content Include="Content\img\client\1.jpg" />
+    <Content Include="Content\img\client\2.jpg" />
+    <Content Include="Content\img\electronic\1.jpg" />
+    <Content Include="Content\img\electronic\1.png" />
+    <Content Include="Content\img\electronic\2.png" />
+    <Content Include="Content\img\electronic\3.png" />
+    <Content Include="Content\img\electronic\4.png" />
+    <Content Include="Content\img\footer\1.jpg" />
+    <Content Include="Content\img\footer\2.jpg" />
+    <Content Include="Content\img\footer\3.jpg" />
+    <Content Include="Content\img\footer\4.jpg" />
+    <Content Include="Content\img\footer\5.jpg" />
+    <Content Include="Content\img\footer\6.jpg" />
+    <Content Include="Content\img\icon\email.jpg" />
+    <Content Include="Content\img\icon\facebook.png" />
+    <Content Include="Content\img\icon\googleplus.jpg" />
+    <Content Include="Content\img\icon\pinterest.jpg" />
+    <Content Include="Content\img\icon\twitter.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\menu-l\1-1.jpg" />
+    <Content Include="Content\img\menu-l\1-2.jpg" />
+    <Content Include="Content\img\menu-l\1.png" />
+    <Content Include="Content\img\menu-l\10.png" />
+    <Content Include="Content\img\menu-l\11.png" />
+    <Content Include="Content\img\menu-l\12.png" />
+    <Content Include="Content\img\menu-l\2.png" />
+    <Content Include="Content\img\menu-l\3.png" />
+    <Content Include="Content\img\menu-l\4.png" />
+    <Content Include="Content\img\menu-l\5.png" />
+    <Content Include="Content\img\menu-l\6.png" />
+    <Content Include="Content\img\menu-l\7.png" />
+    <Content Include="Content\img\menu-l\8.png" />
+    <Content Include="Content\img\menu-l\9.png" />
+    <Content Include="Content\img\nationlogo\0.jpg" />
+    <Content Include="Content\img\nationlogo\1.jpg" />
+    <Content Include="Content\img\nationlogo\10.jpg" />
+    <Content Include="Content\img\nationlogo\100.jpg" />
+    <Content Include="Content\img\nationlogo\101.jpg" />
+    <Content Include="Content\img\nationlogo\102.jpg" />
+    <Content Include="Content\img\nationlogo\103.jpg" />
+    <Content Include="Content\img\nationlogo\104.jpg" />
+    <Content Include="Content\img\nationlogo\105.jpg" />
+    <Content Include="Content\img\nationlogo\106.jpg" />
+    <Content Include="Content\img\nationlogo\107.jpg" />
+    <Content Include="Content\img\nationlogo\108.jpg" />
+    <Content Include="Content\img\nationlogo\109.jpg" />
+    <Content Include="Content\img\nationlogo\11.jpg" />
+    <Content Include="Content\img\nationlogo\110.jpg" />
+    <Content Include="Content\img\nationlogo\111.jpg" />
+    <Content Include="Content\img\nationlogo\112.jpg" />
+    <Content Include="Content\img\nationlogo\113.jpg" />
+    <Content Include="Content\img\nationlogo\114.jpg" />
+    <Content Include="Content\img\nationlogo\115.jpg" />
+    <Content Include="Content\img\nationlogo\116.jpg" />
+    <Content Include="Content\img\nationlogo\117.jpg" />
+    <Content Include="Content\img\nationlogo\118.jpg" />
+    <Content Include="Content\img\nationlogo\119.jpg" />
+    <Content Include="Content\img\nationlogo\12.jpg" />
+    <Content Include="Content\img\nationlogo\120.jpg" />
+    <Content Include="Content\img\nationlogo\121.jpg" />
+    <Content Include="Content\img\nationlogo\122.jpg" />
+    <Content Include="Content\img\nationlogo\123.jpg" />
+    <Content Include="Content\img\nationlogo\124.jpg" />
+    <Content Include="Content\img\nationlogo\125.jpg" />
+    <Content Include="Content\img\nationlogo\126.jpg" />
+    <Content Include="Content\img\nationlogo\127.jpg" />
+    <Content Include="Content\img\nationlogo\128.jpg" />
+    <Content Include="Content\img\nationlogo\129.jpg" />
+    <Content Include="Content\img\nationlogo\13.jpg" />
+    <Content Include="Content\img\nationlogo\130.jpg" />
+    <Content Include="Content\img\nationlogo\131.jpg" />
+    <Content Include="Content\img\nationlogo\132.jpg" />
+    <Content Include="Content\img\nationlogo\133.jpg" />
+    <Content Include="Content\img\nationlogo\134.jpg" />
+    <Content Include="Content\img\nationlogo\135.jpg" />
+    <Content Include="Content\img\nationlogo\136.jpg" />
+    <Content Include="Content\img\nationlogo\137.jpg" />
+    <Content Include="Content\img\nationlogo\138.jpg" />
+    <Content Include="Content\img\nationlogo\139.jpg" />
+    <Content Include="Content\img\nationlogo\14.jpg" />
+    <Content Include="Content\img\nationlogo\140.jpg" />
+    <Content Include="Content\img\nationlogo\141.jpg" />
+    <Content Include="Content\img\nationlogo\142.jpg" />
+    <Content Include="Content\img\nationlogo\143.jpg" />
+    <Content Include="Content\img\nationlogo\144.jpg" />
+    <Content Include="Content\img\nationlogo\145.jpg" />
+    <Content Include="Content\img\nationlogo\146.jpg" />
+    <Content Include="Content\img\nationlogo\147.jpg" />
+    <Content Include="Content\img\nationlogo\148.jpg" />
+    <Content Include="Content\img\nationlogo\149.jpg" />
+    <Content Include="Content\img\nationlogo\15.jpg" />
+    <Content Include="Content\img\nationlogo\150.jpg" />
+    <Content Include="Content\img\nationlogo\151.jpg" />
+    <Content Include="Content\img\nationlogo\152.jpg" />
+    <Content Include="Content\img\nationlogo\153.jpg" />
+    <Content Include="Content\img\nationlogo\154.jpg" />
+    <Content Include="Content\img\nationlogo\155.jpg" />
+    <Content Include="Content\img\nationlogo\156.jpg" />
+    <Content Include="Content\img\nationlogo\157.jpg" />
+    <Content Include="Content\img\nationlogo\158.jpg" />
+    <Content Include="Content\img\nationlogo\159.jpg" />
+    <Content Include="Content\img\nationlogo\16.jpg" />
+    <Content Include="Content\img\nationlogo\160.jpg" />
+    <Content Include="Content\img\nationlogo\161.jpg" />
+    <Content Include="Content\img\nationlogo\162.jpg" />
+    <Content Include="Content\img\nationlogo\163.jpg" />
+    <Content Include="Content\img\nationlogo\164.jpg" />
+    <Content Include="Content\img\nationlogo\165.jpg" />
+    <Content Include="Content\img\nationlogo\166.jpg" />
+    <Content Include="Content\img\nationlogo\167.jpg" />
+    <Content Include="Content\img\nationlogo\168.jpg" />
+    <Content Include="Content\img\nationlogo\169.jpg" />
+    <Content Include="Content\img\nationlogo\17.jpg" />
+    <Content Include="Content\img\nationlogo\170.jpg" />
+    <Content Include="Content\img\nationlogo\171.jpg" />
+    <Content Include="Content\img\nationlogo\172.jpg" />
+    <Content Include="Content\img\nationlogo\173.jpg" />
+    <Content Include="Content\img\nationlogo\174.jpg" />
+    <Content Include="Content\img\nationlogo\175.jpg" />
+    <Content Include="Content\img\nationlogo\176.jpg" />
+    <Content Include="Content\img\nationlogo\177.jpg" />
+    <Content Include="Content\img\nationlogo\178.jpg" />
+    <Content Include="Content\img\nationlogo\179.jpg" />
+    <Content Include="Content\img\nationlogo\18.jpg" />
+    <Content Include="Content\img\nationlogo\180.jpg" />
+    <Content Include="Content\img\nationlogo\181.jpg" />
+    <Content Include="Content\img\nationlogo\182.jpg" />
+    <Content Include="Content\img\nationlogo\183.jpg" />
+    <Content Include="Content\img\nationlogo\184.jpg" />
+    <Content Include="Content\img\nationlogo\185.jpg" />
+    <Content Include="Content\img\nationlogo\186.jpg" />
+    <Content Include="Content\img\nationlogo\187.jpg" />
+    <Content Include="Content\img\nationlogo\188.jpg" />
+    <Content Include="Content\img\nationlogo\189.jpg" />
+    <Content Include="Content\img\nationlogo\19.jpg" />
+    <Content Include="Content\img\nationlogo\190.jpg" />
+    <Content Include="Content\img\nationlogo\191.jpg" />
+    <Content Include="Content\img\nationlogo\192.jpg" />
+    <Content Include="Content\img\nationlogo\193.jpg" />
+    <Content Include="Content\img\nationlogo\194.jpg" />
+    <Content Include="Content\img\nationlogo\195.jpg" />
+    <Content Include="Content\img\nationlogo\196.jpg" />
+    <Content Include="Content\img\nationlogo\197.jpg" />
+    <Content Include="Content\img\nationlogo\198.jpg" />
+    <Content Include="Content\img\nationlogo\199.jpg" />
+    <Content Include="Content\img\nationlogo\2.jpg" />
+    <Content Include="Content\img\nationlogo\20.jpg" />
+    <Content Include="Content\img\nationlogo\200.jpg" />
+    <Content Include="Content\img\nationlogo\201.jpg" />
+    <Content Include="Content\img\nationlogo\202.jpg" />
+    <Content Include="Content\img\nationlogo\203.jpg" />
+    <Content Include="Content\img\nationlogo\204.jpg" />
+    <Content Include="Content\img\nationlogo\205.jpg" />
+    <Content Include="Content\img\nationlogo\206.jpg" />
+    <Content Include="Content\img\nationlogo\207.jpg" />
+    <Content Include="Content\img\nationlogo\208.jpg" />
+    <Content Include="Content\img\nationlogo\209.jpg" />
+    <Content Include="Content\img\nationlogo\21.jpg" />
+    <Content Include="Content\img\nationlogo\210.jpg" />
+    <Content Include="Content\img\nationlogo\211.jpg" />
+    <Content Include="Content\img\nationlogo\212.jpg" />
+    <Content Include="Content\img\nationlogo\213.jpg" />
+    <Content Include="Content\img\nationlogo\214.jpg" />
+    <Content Include="Content\img\nationlogo\215.jpg" />
+    <Content Include="Content\img\nationlogo\216.jpg" />
+    <Content Include="Content\img\nationlogo\217.jpg" />
+    <Content Include="Content\img\nationlogo\218.jpg" />
+    <Content Include="Content\img\nationlogo\219.jpg" />
+    <Content Include="Content\img\nationlogo\22.jpg" />
+    <Content Include="Content\img\nationlogo\220.jpg" />
+    <Content Include="Content\img\nationlogo\221.jpg" />
+    <Content Include="Content\img\nationlogo\222.jpg" />
+    <Content Include="Content\img\nationlogo\23.jpg" />
+    <Content Include="Content\img\nationlogo\24.jpg" />
+    <Content Include="Content\img\nationlogo\25.jpg" />
+    <Content Include="Content\img\nationlogo\26.jpg" />
+    <Content Include="Content\img\nationlogo\27.jpg" />
+    <Content Include="Content\img\nationlogo\28.jpg" />
+    <Content Include="Content\img\nationlogo\29.jpg" />
+    <Content Include="Content\img\nationlogo\3.jpg" />
+    <Content Include="Content\img\nationlogo\30.jpg" />
+    <Content Include="Content\img\nationlogo\31.jpg" />
+    <Content Include="Content\img\nationlogo\32.jpg" />
+    <Content Include="Content\img\nationlogo\33.jpg" />
+    <Content Include="Content\img\nationlogo\34.jpg" />
+    <Content Include="Content\img\nationlogo\35.jpg" />
+    <Content Include="Content\img\nationlogo\36.jpg" />
+    <Content Include="Content\img\nationlogo\37.jpg" />
+    <Content Include="Content\img\nationlogo\38.jpg" />
+    <Content Include="Content\img\nationlogo\39.jpg" />
+    <Content Include="Content\img\nationlogo\4.jpg" />
+    <Content Include="Content\img\nationlogo\40.jpg" />
+    <Content Include="Content\img\nationlogo\41.jpg" />
+    <Content Include="Content\img\nationlogo\42.jpg" />
+    <Content Include="Content\img\nationlogo\43.jpg" />
+    <Content Include="Content\img\nationlogo\44.jpg" />
+    <Content Include="Content\img\nationlogo\45.jpg" />
+    <Content Include="Content\img\nationlogo\46.jpg" />
+    <Content Include="Content\img\nationlogo\47.jpg" />
+    <Content Include="Content\img\nationlogo\48.jpg" />
+    <Content Include="Content\img\nationlogo\49.jpg" />
+    <Content Include="Content\img\nationlogo\5.jpg" />
+    <Content Include="Content\img\nationlogo\50.jpg" />
+    <Content Include="Content\img\nationlogo\51.jpg" />
+    <Content Include="Content\img\nationlogo\52.jpg" />
+    <Content Include="Content\img\nationlogo\53.jpg" />
+    <Content Include="Content\img\nationlogo\54.jpg" />
+    <Content Include="Content\img\nationlogo\55.jpg" />
+    <Content Include="Content\img\nationlogo\56.jpg" />
+    <Content Include="Content\img\nationlogo\57.jpg" />
+    <Content Include="Content\img\nationlogo\58.jpg" />
+    <Content Include="Content\img\nationlogo\59.jpg" />
+    <Content Include="Content\img\nationlogo\6.jpg" />
+    <Content Include="Content\img\nationlogo\60.jpg" />
+    <Content Include="Content\img\nationlogo\61.jpg" />
+    <Content Include="Content\img\nationlogo\62.jpg" />
+    <Content Include="Content\img\nationlogo\63.jpg" />
+    <Content Include="Content\img\nationlogo\64.jpg" />
+    <Content Include="Content\img\nationlogo\65.jpg" />
+    <Content Include="Content\img\nationlogo\66.jpg" />
+    <Content Include="Content\img\nationlogo\67.jpg" />
+    <Content Include="Content\img\nationlogo\68.jpg" />
+    <Content Include="Content\img\nationlogo\69.jpg" />
+    <Content Include="Content\img\nationlogo\7.jpg" />
+    <Content Include="Content\img\nationlogo\70.jpg" />
+    <Content Include="Content\img\nationlogo\71.jpg" />
+    <Content Include="Content\img\nationlogo\72.jpg" />
+    <Content Include="Content\img\nationlogo\73.jpg" />
+    <Content Include="Content\img\nationlogo\74.jpg" />
+    <Content Include="Content\img\nationlogo\75.jpg" />
+    <Content Include="Content\img\nationlogo\76.jpg" />
+    <Content Include="Content\img\nationlogo\77.jpg" />
+    <Content Include="Content\img\nationlogo\78.jpg" />
+    <Content Include="Content\img\nationlogo\79.jpg" />
+    <Content Include="Content\img\nationlogo\8.jpg" />
+    <Content Include="Content\img\nationlogo\80.jpg" />
+    <Content Include="Content\img\nationlogo\81.jpg" />
+    <Content Include="Content\img\nationlogo\82.jpg" />
+    <Content Include="Content\img\nationlogo\83.jpg" />
+    <Content Include="Content\img\nationlogo\84.jpg" />
+    <Content Include="Content\img\nationlogo\85.jpg" />
+    <Content Include="Content\img\nationlogo\86.jpg" />
+    <Content Include="Content\img\nationlogo\87.jpg" />
+    <Content Include="Content\img\nationlogo\88.jpg" />
+    <Content Include="Content\img\nationlogo\89.jpg" />
+    <Content Include="Content\img\nationlogo\9.jpg" />
+    <Content Include="Content\img\nationlogo\90.jpg" />
+    <Content Include="Content\img\nationlogo\91.jpg" />
+    <Content Include="Content\img\nationlogo\92.jpg" />
+    <Content Include="Content\img\nationlogo\93.jpg" />
+    <Content Include="Content\img\nationlogo\94.jpg" />
+    <Content Include="Content\img\nationlogo\95.jpg" />
+    <Content Include="Content\img\nationlogo\96.jpg" />
+    <Content Include="Content\img\nationlogo\97.jpg" />
+    <Content Include="Content\img\nationlogo\98.jpg" />
+    <Content Include="Content\img\nationlogo\99.jpg" />
+    <Content Include="Content\img\payment.png" />
+    <Content Include="Content\img\product\1.jpg" />
+    <Content Include="Content\img\product\10.jpg" />
+    <Content Include="Content\img\product\11.jpg" />
+    <Content Include="Content\img\product\13.jpg" />
+    <Content Include="Content\img\product\14.jpg" />
+    <Content Include="Content\img\product\15.jpg" />
+    <Content Include="Content\img\product\16.jpg" />
+    <Content Include="Content\img\product\17.jpg" />
+    <Content Include="Content\img\product\2.jpg" />
+    <Content Include="Content\img\product\3.jpg" />
+    <Content Include="Content\img\product\4.jpg" />
+    <Content Include="Content\img\product\5.jpg" />
+    <Content Include="Content\img\product\6.jpg" />
+    <Content Include="Content\img\product\7.jpg" />
+    <Content Include="Content\img\product\9.jpg" />
+    <Content Include="Content\img\slider\1.jpg" />
+    <Content Include="Content\img\slider\2.jpg" />
+    <Content Include="Content\js\ajax-mail.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery.magnific-popup.min.js" />
+    <Content Include="Content\js\jquery.meanmenu.js" />
+    <Content Include="Content\js\jquery.nivo.slider.pack.js" />
+    <Content Include="Content\js\jquery.scrollup.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\owl.carousel.min.js" />
+    <Content Include="Content\js\plugins.js" />
+    <Content Include="Content\js\vendor\jquery-1.12.0.min.js" />
+    <Content Include="Content\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="Content\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Home\_Partial\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{2cbf67bb-b6a9-421a-ad88-152f504191f0}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{0d138c5c-ab65-437f-b323-b71f666afafc}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Partial\topmenu.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Partial\header.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Partial\footer.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>47946</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:47946/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

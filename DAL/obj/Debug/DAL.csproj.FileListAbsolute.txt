@@ -1,0 +1,14 @@
+E:\CarBrand\DAL\bin\Debug\DAL.dll
+E:\CarBrand\DAL\bin\Debug\DAL.pdb
+E:\CarBrand\DAL\bin\Debug\Models.dll
+E:\CarBrand\DAL\bin\Debug\Models.pdb
+E:\CarBrand\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\CarBrand\DAL\obj\Debug\DAL.dll
+E:\CarBrand\DAL\obj\Debug\DAL.pdb
+E:\CarBrands\CarBrand-Master\DAL\bin\Debug\DAL.dll
+E:\CarBrands\CarBrand-Master\DAL\bin\Debug\DAL.pdb
+E:\CarBrands\CarBrand-Master\DAL\bin\Debug\Models.dll
+E:\CarBrands\CarBrand-Master\DAL\bin\Debug\Models.pdb
+E:\CarBrands\CarBrand-Master\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\CarBrands\CarBrand-Master\DAL\obj\Debug\DAL.dll
+E:\CarBrands\CarBrand-Master\DAL\obj\Debug\DAL.pdb
