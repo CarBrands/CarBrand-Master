@@ -91,3 +91,4 @@ E:\CarBrands\CarBrand-Master\CarUI\bin\zh-Hans\System.Web.WebPages.Deployment.re
 E:\CarBrands\CarBrand-Master\CarUI\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 E:\CarBrands\CarBrand-Master\CarUI\obj\Debug\CarUI.dll
 E:\CarBrands\CarBrand-Master\CarUI\obj\Debug\CarUI.pdb
+E:\CarBrands\CarBrand-Master\CarUI\obj\Debug\CarUI.csprojResolveAssemblyReference.cache

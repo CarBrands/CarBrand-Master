@@ -19,6 +19,11 @@ namespace CarAdmin.Controllers
             AbstractFactory.CreateFunInstance<D_CountriesBLL>("D_CountriesBLL");
 
         private readonly C_CarMasterBrandBLL _objMasterBrand = AbstractFactory.CreateFunInstance<C_CarMasterBrandBLL>("C_CarMasterBrandBLL");
+
+        private readonly C_BrandIntroductionBLL _objBrandIntr =
+            AbstractFactory.CreateFunInstance<C_BrandIntroductionBLL>("C_BrandIntroductionBLL");
+
+        private readonly C_CarBrandBLL _objCarBrand = AbstractFactory.CreateFunInstance<C_CarBrandBLL>("C_CarBrandBLL");
         #region 国家字段维护
         /// <summary>
         /// 所有国家信息
@@ -78,6 +83,7 @@ namespace CarAdmin.Controllers
             return false;
         } 
         #endregion
+        #region 主品牌信息维护
 
         public ActionResult MasterBrand()
         {
@@ -114,10 +120,44 @@ namespace CarAdmin.Controllers
             model.UpdateTime = Convert.ToDateTime(Request["UpdateTime"]);
             if (mId == 0)
             {
-                return Json(_objMasterBrand.InsertMasterBrand(model),JsonRequestBehavior.AllowGet);
+                return Json(_objMasterBrand.InsertMasterBrand(model), JsonRequestBehavior.AllowGet);
             }
             model.MasterBrandID = mId;
-            return Json(_objMasterBrand.EditMasterBrand(model),JsonRequestBehavior.AllowGet);
-        }
+            return Json(_objMasterBrand.EditMasterBrand(model), JsonRequestBehavior.AllowGet);
+        } 
+        #endregion
+        #region 主品牌介绍信息维护
+
+        public ActionResult BrandIntroduction()
+        {
+            int currentindex = 0;
+            if (!int.TryParse(Request["pageIndex"], out currentindex))
+                currentindex = 1;
+            var ds = _objBrandIntr.GetDataSet(currentindex, InPageSize);
+            ViewBag.PageIndex = currentindex;
+            ViewBag.Count = ds.Tables[1].Rows[0][0];
+            ViewBag.PageSize = InPageSize;
+            var ret = JsonConvert.SerializeObject(ds.Tables[0]);
+
+            ViewBag.Tab = ret;
+            return View();
+        } 
+        #endregion
+        #region 品牌信息维护
+
+        public ActionResult CarBrand()
+        {
+            int currentindex = 0;
+            if (!int.TryParse(Request["pageIndex"], out currentindex))
+                currentindex = 1;
+            var ds = _objCarBrand.GetDataSet(currentindex, InPageSize);
+            ViewBag.PageIndex = currentindex;
+            ViewBag.Count = ds.Tables[1].Rows[0][0];
+            ViewBag.PageSize = InPageSize;
+            var ret = JsonConvert.SerializeObject(ds.Tables[0]);
+            ViewBag.Tab = ret;
+            return View();
+        } 
+        #endregion
     }
 }

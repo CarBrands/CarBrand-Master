@@ -1,6 +1,13 @@
-﻿@{
+﻿@using CarAdmin.Models
+@{
     ViewBag.Title = "品牌简介";
     Layout = "~/Views/_Layout.cshtml";
+    var pager = new PagerInfo()
+    {
+        CurrentPageIndex = ViewBag.PageIndex ?? 1,
+        TotalCount = ViewBag.Count ?? 0,
+        PageSize = ViewBag.PageSize ?? 20
+    };
 }
 
 <h2>BrandIntroduction</h2>

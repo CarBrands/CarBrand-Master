@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_BrandIntroductionDAL.cs" />
+    <Compile Include="C_CarBrandDAL.cs" />
     <Compile Include="C_CarMasterBrandDAL.cs" />
     <Compile Include="DbHelper\SqlHelper.cs" />
     <Compile Include="D_CountriesDAL.cs" />
