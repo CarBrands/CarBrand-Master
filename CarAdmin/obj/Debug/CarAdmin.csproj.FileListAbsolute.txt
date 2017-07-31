@@ -85,6 +85,5 @@ E:\CarBrands\CarBrand-Master\CarAdmin\bin\zh-Hans\System.Web.Razor.resources.dll
 E:\CarBrands\CarBrand-Master\CarAdmin\bin\zh-Hans\System.Web.WebPages.resources.dll
 E:\CarBrands\CarBrand-Master\CarAdmin\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\CarBrands\CarBrand-Master\CarAdmin\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
-E:\CarBrands\CarBrand-Master\CarAdmin\obj\Debug\CarAdmin.csprojResolveAssemblyReference.cache
 E:\CarBrands\CarBrand-Master\CarAdmin\obj\Debug\CarAdmin.dll
 E:\CarBrands\CarBrand-Master\CarAdmin\obj\Debug\CarAdmin.pdb

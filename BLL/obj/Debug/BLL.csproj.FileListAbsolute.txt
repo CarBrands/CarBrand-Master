@@ -9,3 +9,14 @@ E:\CarBrand\BLL\obj\Debug\BLL.dll
 E:\CarBrand\BLL\obj\Debug\BLL.pdb
 E:\CarBrand\BLL\bin\Debug\Common.dll
 E:\CarBrand\BLL\bin\Debug\Common.pdb
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\BLL.dll
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\BLL.pdb
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\Common.dll
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\DAL.dll
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\Models.dll
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\Common.pdb
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\DAL.pdb
+E:\CarBrands\CarBrand-Master\BLL\bin\Debug\Models.pdb
+E:\CarBrands\CarBrand-Master\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\CarBrands\CarBrand-Master\BLL\obj\Debug\BLL.dll
+E:\CarBrands\CarBrand-Master\BLL\obj\Debug\BLL.pdb
