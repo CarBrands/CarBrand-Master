@@ -26,6 +26,5 @@ namespace CarAdmin.Controllers
             return View();
         }
 
-
     }
 }

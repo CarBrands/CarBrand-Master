@@ -2,8 +2,4 @@ E:\CarBrand\Models\bin\Debug\Models.dll
 E:\CarBrand\Models\bin\Debug\Models.pdb
 E:\CarBrand\Models\obj\Debug\Models.dll
 E:\CarBrand\Models\obj\Debug\Models.pdb
-E:\CarBrands\CarBrand-Master\Models\bin\Debug\Models.dll
-E:\CarBrands\CarBrand-Master\Models\bin\Debug\Models.pdb
-E:\CarBrands\CarBrand-Master\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
-E:\CarBrands\CarBrand-Master\Models\obj\Debug\Models.dll
-E:\CarBrands\CarBrand-Master\Models\obj\Debug\Models.pdb
+E:\CarBrand\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

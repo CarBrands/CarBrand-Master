@@ -123,6 +123,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\font.css" />
@@ -135,6 +136,7 @@
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\1.png" />
+    <Content Include="Content\images\2.jpg" />
     <Content Include="Content\images\2.png" />
     <Content Include="Content\images\3.png" />
     <Content Include="Content\images\bg.jpg" />
@@ -156,6 +158,8 @@
     <Content Include="Content\images\prev.png" />
     <Content Include="Content\images\search-icon.png" />
     <Content Include="Content\js\angular.min.js" />
+    <Content Include="Content\js\bootstrap-datetimepicker.fr.js" />
+    <Content Include="Content\js\bootstrap-datetimepicker.min.js" />
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\jquery-1.8.2.min.js" />
     <Content Include="Content\js\jquery.dcjqaccordion.2.7.js" />
@@ -239,6 +243,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\DataTables\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DataTables\MasterBrand.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DataTables\BrandIntroduction.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

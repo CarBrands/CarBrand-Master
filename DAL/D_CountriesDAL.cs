@@ -19,6 +19,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.DbHelper;
+using Models;
 
 namespace DAL
 {
@@ -48,6 +49,29 @@ Countrys WHERE ID BETWEEN (@PageIndex-1)*@PageSize+1 AND @PageIndex*@PageSize;SE
             if (obj != null && obj.Rows.Count > 0)
                 return obj;
             return null;
+        }
+
+        public bool EditCountryBycId(D_CountriesEntity model)
+        {
+            string strSql = @"
+UPDATE [dbo].[D_Countries]
+   SET [Name] = @cName
+      ,[Code] = @cCode
+      ,[OtherName] = @cOtherName
+      ,[LogoUrl] = @cLogoUrl
+      ,[Area] = @cArea
+ WHERE CountryID=@CountryID";
+            var parms = new SqlParameter[]
+            {
+                new SqlParameter("@cName",SqlDbType.VarChar){ Value=model.Name }
+                ,new SqlParameter("@cCode",SqlDbType.VarChar){ Value=model.Code }
+                ,new SqlParameter("@cOtherName",SqlDbType.VarChar){ Value=model.OtherName }
+                ,new SqlParameter("@cLogoUrl",SqlDbType.VarChar){ Value=model.LogoUrl }
+                ,new SqlParameter("@cArea",SqlDbType.VarChar){ Value=model.Area }
+                ,new SqlParameter("@CountryID",SqlDbType.Int){ Value=model.CountryID }
+            };
+            var val = SqlHelper.ExecuteNonQuery(SqlHelper.ConStr, CommandType.Text, strSql, parms);
+            return val>0?true:false;
         }
     }
 }

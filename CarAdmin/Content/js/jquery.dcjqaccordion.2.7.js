@@ -47,7 +47,6 @@
 			resetAccordion();
 
 			if(defaults.eventType == 'hover'){
-
 				var config = {
 					sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)
 					interval: defaults.hoverDelay, // number = milliseconds for onMouseOver polling interval
@@ -78,9 +77,7 @@
 				}
 
 			} else {
-			
 				$('li a',obj).click(function(e){
-
 					$activeLi = $(this).parent('li');
 					$parentsLi = $activeLi.parents('li');
 					$parentsUl = $activeLi.parents('ul');
@@ -114,7 +111,6 @@
 
 			// Set up accordion
 			function setUpAccordion(){
-
 				$arrow = '<span class="'+defaults.classArrow+'"></span>';
 				var classParentLi = defaults.classParent+'-li';
 				$('> ul',obj).show();

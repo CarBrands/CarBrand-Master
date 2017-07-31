@@ -73,7 +73,7 @@ a,
 button,
 input {
     outline: medium none;
-    color: #F4A137 ;
+    color: #363636 ;
 }
 label {
     font-size: 15px;
@@ -182,7 +182,7 @@ textarea {
 *************************/
 input {
     background: #eceff8;
-    border: 2px solid #eceff8;
+    border: 2px solid #F4A137;
     height: 45px;
     box-shadow: none;
     padding-left: 10px;
@@ -193,7 +193,7 @@ input {
 select {
     width: 100%;
     background: #eceff8;
-    border: 2px solid #eceff8;
+    border: 2px solid #F4A137;
     height: 45px;
     padding-left: 10px;
     box-shadow: none;

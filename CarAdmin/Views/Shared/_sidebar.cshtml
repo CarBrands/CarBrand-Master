@@ -4,9 +4,9 @@
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="#">
+                    <a href="@Url.Content("~/Home/Index")">
                         <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
+                        <span>工作台</span>
                     </a>
                 </li>
 
@@ -51,7 +51,7 @@
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-envelope"></i>
-                        <span>Mail </span>
+                        <span>通知</span>
                     </a>
                     <ul class="sub">
                         <li><a href="mail.html">Inbox</a></li>
@@ -61,7 +61,7 @@
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class=" fa fa-bar-chart-o"></i>
-                        <span>Charts</span>
+                        <span>生态图表</span>
                     </a>
                     <ul class="sub">
                         <li><a href="chartjs.html">Chart js</a></li>
@@ -71,7 +71,7 @@
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class=" fa fa-bar-chart-o"></i>
-                        <span>Maps</span>
+                        <span>地图</span>
                     </a>
                     <ul class="sub">
                         <li><a href="google_map.html">Google Map</a></li>
@@ -81,10 +81,10 @@
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-glass"></i>
-                        <span>Extra</span>
+                        <span>图片管理</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="gallery.html">品牌图片管理</a></li>
                         <li><a href="404.html">404 Error</a></li>
                         <li><a href="registration.html">Registration</a></li>
                     </ul>
@@ -95,15 +95,15 @@
                         <span>表数据</span>
                     </a>
                     <ul class="sub">
-                        <li><a href="@Url.Content("DataTables/Index")">国家</a></li>
-                        <li><a href="404.html">主品牌</a></li>
+                        <li><a href="@Url.Content("~/DataTables/Index")">国家</a></li>
+                        <li><a href="@Url.Content("~/DataTables/MasterBrand")">主品牌</a></li>
                         <li><a href="registration.html">品牌简介</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="login.html">
                         <i class="fa fa-user"></i>
-                        <span>Login Page</span>
+                        <span>退出登录</span>
                     </a>
                 </li>
             </ul>

@@ -19,6 +19,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 using DAL;
+using Models;
 
 namespace BLL
 {
@@ -35,6 +36,11 @@ namespace BLL
         public DataTable GetCountryBycId(int cId)
         {
             return _dalCountries.GetCountryBycId(cId);
+        }
+
+        public bool EditCountryBycId(D_CountriesEntity model)
+        {
+            return _dalCountries.EditCountryBycId(model);
         }
     }
 }

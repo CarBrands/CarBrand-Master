@@ -1,7 +1,7 @@
 ﻿@using CarAdmin.Controllers.Extensions
 @using CarAdmin.Models
 @{
-    ViewBag.Title = "表信息";
+    ViewBag.Title = "国家";
     Layout = "~/Views/_Layout.cshtml";
 
 
@@ -44,7 +44,7 @@
                                 <td>{{ x.Area }}</td>
                                 <td>
                                     <a class="btn btn-success" data-toggle="modal" data-whatever="{{x.CountryID}}" href="#myModal">编辑</a>|
-                                    <a class="btn btn-success">删除</a>
+                                    <a class="btn btn-success" data-toggle="modal" data-whatever="{{x.CountryID}}" href="#myModaldel">删除</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -74,72 +74,97 @@
                     <form role="form">
                         <div class="form-group">
                             <label>名称</label>
-                            <input type="text" ng-model="Name" class="form-control" placeholder="名称">
+                            <input type="text" id="Name" class="form-control" placeholder="名称">
                         </div>
                         <div class="form-group">
                             <label>编码</label>
-                            <input type="text" ng-model="Code" class="form-control" placeholder="编码">
+                            <input type="text" id="Code" class="form-control" placeholder="编码">
                         </div>
                         <div class="form-group">
                             <label>别名</label>
-                            <input type="text" ng-model="OtherName" class="form-control" placeholder="别名">
+                            <input type="text" id="OtherName" class="form-control" placeholder="别名">
                         </div>
                         <div class="form-group">
                             <label>LogoUrl</label>
-                            <input type="text" ng-model="LogoUrl" class="form-control" placeholder="LogoUrl">
+                            <input type="text" id="LogoUrl" class="form-control" placeholder="LogoUrl">
                         </div>
                         <div class="form-group">
                             <label>区域</label>
-                            <input type="text" ng-model="Area" class="form-control" placeholder="区域">
+                            <input type="text" id="Area" class="form-control" placeholder="区域">
                         </div>
-                        <button type="submit" class="btn btn-default">保存</button>
+                        <button type="submit" ng-click="subDat(hCountryID)" class="btn btn-default">保存</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModaldel" class="modal fade in">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                    <h4 class="modal-title">删除</h4>
+                </div>
+                <div class="modal-body">
+                    <br /><span>确定要删除么？</span><br /><br /><hr />
+                    <button type="submit" ng-click="delDat(dCountryID)" class="btn btn-default">确定</button>
+                    <button aria-hidden="true" data-dismiss="modal" class="btn btn-default" type="button">取消</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--main content end-->
-
 @section head_scripts{
     <script>
         var app = angular.module('ngApp', []);
-
-        app.controller('ngCtrl', function($scope) {
+        app.controller('ngCtrl', function($scope, $http) {
             $scope.countrys = @Html.Raw(ViewBag.Tab);
+            $(document).on('click', '[data-toggle="modal"]', function(e) {
+                for (var i = 0; i < $scope.countrys.length; i++) {
+                    if ($scope.countrys[i].CountryID.toString() == e.target.attributes[2].nodeValue) {
+                        $('#Name').val($scope.countrys[i].Name);
+                        $('#Code').val($scope.countrys[i].Code);
+                        $('#OtherName').val($scope.countrys[i].OtherName);
+                        $('#LogoUrl').val($scope.countrys[i].LogoUrl);
+                        $('#Area').val($scope.countrys[i].Area);
+                        $scope.hCountryID = $scope.countrys[i].CountryID;
+                        $scope.dCountryID = e.target.attributes[2].nodeValue;
+                    }
+                }
+            });
+            $scope.subDat = function(cId) {
+                var parm = {
+                    CountryID: cId,
+                    Name: $('#Name').val(),
+                    Code: $('#Code').val(),
+                    OtherName: $('#OtherName').val(),
+                    LogoUrl: $('#LogoUrl').val(),
+                    Area: $('#Area').val()
+                };
+                $.ajax({
+                    url: '/DataTables/EditCountryBycId',
+                    type: 'post',
+                    data: parm,
+                    dataType: 'json',
+                    success: function(dt) {
+                        if (dt == true)
+                            window.location.reload();
+                    }
+                });
+            }
+            $scope.delDat = function(cId) {
+                $http.get('/DataTables/DelCountryBycId/' + cId).then(function(dt) {
+                    if (dt == false)
+                        return
 
-            $scope.editCountry = function(cId) {
-                debugger
-                // 执行一些动作...
-            };
+                }, function(response) {
+                    // 请求失败执行代码
+                });
+            }
+
         });
-       
+
+
     </script>
 }
-<script type="text/javascript">
-    $('#myModal').on('show.bs.modal', function(e) {
-        debugger
-
-        $.ajax({
-            url: '/DataTables/GetCountriesAll',
-            type: 'get',
-            data: { Id: e.isTrigger },
-            success: function(dt) {
-                if (dt == null || dt == 'undefined')
-                    return;
-                var obj = eval('(' + dt + ')')[0];
-                $scope.Name = obj.Name;
-                $scope.Code = obj.Code;
-                $scope.OtherName = obj.OtherName;
-                $scope.LogoUrl = obj.LogoUrl;
-                $scope.Area = obj.Area;
-                debugger
-            }
-        });
-        var button = $(e.relatedTarget) // 触发事件的按钮
-        var recipient = button.data('whatever') // 解析出data-whatever内容
-        var modal = $(this)
-        modal.find('.modal-title').text('Message To ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-    });
-</script>

@@ -8,11 +8,11 @@ NOTE: This is Header style file. All Header related style included in this file.
 .header-top-left {
   margin-top: 4px;
 }
-.header-top-left span {
+/*.header-top-left span {
   color: #ffffff;
-}
+}*/
 .header-top-left span a {
-  color: #bdbdbd;
+  color: #363636;
   font-weight: 600;
   margin-right: 5px;
 }
@@ -33,17 +33,17 @@ NOTE: This is Header style file. All Header related style included in this file.
 	position:relative;
 }
 .header-top-right ul li a {
-	color: #bdbdbd;
+	/*color: #bdbdbd;*/
 	display:block;
   transition: all 300ms ease-in-out 0s;
 font-weight:600;  
 }
 .header-top-right ul li a i {
-  color: #ffffff;
+  color: #000;
   padding-right:3px;
 }
 .header-top-right ul li a:hover{
-	color:#fff;
+	/*color:#fff;*/
 }
 .header-top-right ul li ul.show-toggle {
   background: #444444 none repeat scroll 0 0;
@@ -113,13 +113,13 @@ font-weight:600;
 
 /* header-bottom-middle */
 .top-search .tex_top_skype,  .top-search .tex_top_email {
-  color: #f4a137;
+  /*color: #f4a137;*/
   cursor: pointer;
   font-size: 14px;
   padding-right: 35px;
 }
 header .top-search .tex_top_skype span, header .top-search .tex_top_email span {
-  color: #bdbdbd;
+  /*color: #bdbdbd;*/
 }
 header .top-search i.fa {
   padding-right: 3px;
@@ -133,8 +133,8 @@ header .top-search i.fa {
   position: relative;
 }
 .search-box form select#select {
-  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-  border: medium none;
+  background: #fff none repeat scroll 0 0;
+  /*border: medium none;*/
   color: #999999;
   height: 100%;
   padding: 0 8px;
@@ -147,8 +147,8 @@ header .top-search i.fa {
   padding: 2px 10px;
 }
 .search-box form input {
-  background: #171717 none repeat scroll 0 0;
-  border: medium none;
+  background: #fff none repeat scroll 0 0;
+  /*border: medium none;*/
   border-radius: 10px;
   height: 50px;
   padding-left: 180px;

@@ -2,8 +2,4 @@ E:\CarBrand\Common\bin\Debug\Common.dll
 E:\CarBrand\Common\bin\Debug\Common.pdb
 E:\CarBrand\Common\obj\Debug\Common.dll
 E:\CarBrand\Common\obj\Debug\Common.pdb
-E:\CarBrands\CarBrand-Master\Common\bin\Debug\Common.dll
-E:\CarBrands\CarBrand-Master\Common\bin\Debug\Common.pdb
-E:\CarBrands\CarBrand-Master\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
-E:\CarBrands\CarBrand-Master\Common\obj\Debug\Common.dll
-E:\CarBrands\CarBrand-Master\Common\obj\Debug\Common.pdb
+E:\CarBrand\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
